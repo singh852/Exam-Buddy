@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4338ca">
+  <title>Exam Buddy — Your exam application companion</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" onclick="showHome();return false;"><span class="brand-mark">E</span><span>exam<span class="brand-accent">buddy</span><small>YOUR EXAM COMPANION</small></span></a>
+      <nav id="nav-links" class="nav-links">
+        <a href="#features" onclick="showHome()">Features</a>
+        <a href="#how-it-works" onclick="showHome()">How it works</a>
+      </nav>
+      <div class="top-actions" id="top-actions">
+        <button class="btn btn-ghost" onclick="openAuth('login')">Log in</button>
+        <button class="btn btn-primary" onclick="openAuth('register')">Get started <span>→</span></button>
+      </div>
+    </header>
+
+    <main id="home-view">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> MADE FOR YOUR NEXT BIG STEP</div>
+          <h1>Your exam journey.<br><span>Less stressful.</span></h1>
+          <p class="hero-text">Keep your documents organised, prepare your application information, and track every step — all in one place.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary btn-lg" onclick="openAuth('register')">Create free account <span>→</span></button>
+            <button class="btn btn-ghost btn-lg" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">See how it works</button>
+          </div>
+          <div class="trust-line"><span class="avatar-stack"><i>✓</i><i>✓</i><i>✓</i></span><span>Organise smarter. Apply with confidence.</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-glow"></div>
+          <div class="dashboard-card">
+            <div class="mini-head"><div><span class="muted-label">STUDENT WORKSPACE</span><h3>My dashboard</h3></div><span class="round-icon">✦</span></div>
+            <div class="welcome-box"><div class="welcome-symbol">✧</div><div><strong>One step at a time.</strong><p>Your application checklist starts here.</p></div></div>
+            <div class="progress-row"><span>Preparation progress</span><strong>2 of 4</strong></div>
+            <div class="progress-track"><span></span></div>
+            <div class="task-row"><span class="task-icon done">✓</span><div><strong>Profile details</strong><small>Ready to review</small></div><span class="task-state">DONE</span></div>
+            <div class="task-row"><span class="task-icon">▧</span><div><strong>Documents</strong><small>Upload your files</small></div><span class="task-state pending">NEXT</span></div>
+            <div class="task-row"><span class="task-icon">▤</span><div><strong>Application details</strong><small>Save as you go</small></div><span class="task-state">LATER</span></div>
+            <div class="privacy-note">🔒 <span>Your information stays in your workspace.</span></div>
+          </div>
+          <div class="floating-chip chip-one">✦ Stay organised</div>
+          <div class="floating-chip chip-two"><span class="chip-dot"></span> Progress saved</div>
+        </div>
+      </section>
+
+      <section class="stats-strip">
+        <div><strong>One workspace</strong><span>Keep your details together</span></div>
+        <div><strong>Clear next steps</strong><span>Know what needs attention</span></div>
+        <div><strong>Your information</strong><span>Review before you use it</span></div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section-heading"><div class="eyebrow">BUILT AROUND STUDENTS</div><h2>Everything you need to feel <span>prepared.</span></h2><p>Simple tools to organise the work around your exam application.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><div class="feature-icon purple">▤</div><h3>Document organiser</h3><p>Upload supported documents and keep them in one organised workspace.</p></article>
+          <article class="feature-card"><div class="feature-icon blue">✧</div><h3>JEE form autofill</h3><p>Upload your Aadhaar and marksheets. We read the details, you check them, we do the form.</p></article>
+          <article class="feature-card"><div class="feature-icon peach">✓</div><h3>Application tracker</h3><p>Track your preparation status and see what you should do next.</p></article>
+          <article class="feature-card"><div class="feature-icon mint">⌂</div><h3>Your student dashboard</h3><p>Return to your saved profile and assistance requests whenever you need.</p></article>
+        </div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="section-heading"><div class="eyebrow">A SIMPLE PROCESS</div><h2>From scattered to <span>sorted.</span></h2><p>Keep control of your information at every step.</p></div>
+        <div class="steps-grid">
+          <div class="step"><div class="step-number">01</div><h3>Create your workspace</h3><p>Register and add the basic details you choose to provide.</p></div>
+          <div class="step"><div class="step-number">02</div><h3>Organise documents</h3><p>Upload supported files. OCR may help extract text from images.</p></div>
+          <div class="step"><div class="step-number">03</div><h3>Review and track</h3><p>Correct extracted information, create a checklist, and track progress.</p></div>
+        </div>
+        <div class="official-note"><strong>Student-first by design</strong><span>Exam Buddy is an independent assistance tool, not an official NTA/JEE portal. Always verify details and complete required CAPTCHA, OTP, declarations, payment and final submission on the official website.</span></div>
+      </section>
+      <section class="cta-band"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2>Make your next step a little simpler.</h2><p>Create your workspace and start organising your preparation.</p></div><button class="btn btn-light btn-lg" onclick="openAuth('register')">Get started <span>→</span></button></section>
+    </main>
+
+    <main id="auth-view" class="auth-layout hidden">
+      <div class="auth-side"><div class="auth-orb">✦</div><div class="eyebrow">WELCOME TO EXAM BUDDY</div><h2>Your goals are big.<br>Your next step can be simple.</h2><p>One calm place to organise your profile, documents, and application progress.</p><div class="auth-check">✓ &nbsp; Keep your preparation organised</div><div class="auth-check">✓ &nbsp; Review information before use</div></div>
+      <div class="auth-card"><button class="back-link" onclick="showHome()">← Back to home</button><div class="auth-tabs"><button id="login-tab" class="active" onclick="openAuth('login')">Log in</button><button id="register-tab" onclick="openAuth('register')">Create account</button></div>
+        <form id="auth-form" onsubmit="submitAuth(event)">
+          <h2 id="auth-title">Welcome back</h2><p id="auth-subtitle" class="muted">Enter your details to continue.</p>
+          <label id="name-label" class="hidden">Full name<input id="auth-name" autocomplete="name" minlength="2" placeholder="Your full name"></label>
+          <label>Email address<input id="auth-email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+          <label>Password<input id="auth-password" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></label>
+          <p id="auth-error" class="form-error"></p>
+          <button id="auth-submit" class="btn btn-primary btn-full" type="submit">Log in <span>→</span></button>
+          <p class="form-foot">By continuing, you agree to use Exam Buddy responsibly. Use test information while trying this demo.</p>
+        </form>
+      </div>
+    </main>
+
+    <main id="dashboard-view" class="dashboard-view hidden">
+      <aside class="sidebar">
+        <a class="brand side-brand" href="#" onclick="showDashboard('overview');return false;"><span class="brand-mark">E</span><span>exam<span class="brand-accent">buddy</span><small>STUDENT WORKSPACE</small></span></a>
+        <div class="side-label">WORKSPACE</div>
+        <button class="side-link active" data-page="overview" onclick="showDashboard('overview')"><span>⌂</span> Overview</button>
+        <button class="side-link" data-page="profile" onclick="showDashboard('profile')"><span>◎</span> My profile</button>
+        <button class="side-link" data-page="documents" onclick="openJee()"><span>▤</span> Documents</button>
+        <button class="side-link" data-page="applications" onclick="showDashboard('applications')"><span>✓</span> Applications</button>
+        <button class="side-link" data-page="support" onclick="showDashboard('support')"><span>♡</span> Help & support</button>
+        <button id="admin-nav" class="side-link hidden" data-page="admin" onclick="showDashboard('admin')"><span>⚙</span> Admin panel</button>
+        <div class="sidebar-bottom"><div class="mini-user"><div class="user-avatar" id="user-avatar">S</div><div><strong id="sidebar-name">Student</strong><small id="sidebar-role">Student account</small></div></div><button class="side-link logout-link" onclick="logout()">↪ &nbsp; Log out</button></div>
+      </aside>
+      <section class="dashboard-main">
+        <header class="dash-header"><div><div class="eyebrow">YOUR WORKSPACE</div><h1 id="dash-title">Overview</h1><p id="dash-subtitle">A clear view of your next steps.</p></div><div class="dash-header-right"><span class="secure-pill">● Private workspace</span><div class="user-avatar" id="header-avatar">S</div></div></header>
+        <div id="toast" class="toast hidden" role="status"></div>
+        <section id="page-overview" class="dash-page">
+          <div class="welcome-banner"><div><span class="muted-label">YOUR JOURNEY, YOUR PACE</span><h2 id="welcome-name">Welcome back!</h2><p>Small steps add up. Here's where you can start today.</p><button class="btn btn-light" onclick="showDashboard('applications')">View applications →</button></div><div class="banner-illustration">✧</div></div>
+          <div class="metric-grid"><div class="metric-card"><span class="metric-icon purple">▤</span><span class="metric-label">Documents</span><strong id="metric-documents">0</strong><small>Uploaded to your workspace</small></div><div class="metric-card"><span class="metric-icon blue">✓</span><span class="metric-label">Applications</span><strong id="metric-apps">0</strong><small>Assistance records</small></div><div class="metric-card"><span class="metric-icon peach">◷</span><span class="metric-label">In progress</span><strong id="metric-pending">0</strong><small>Not yet completed</small></div></div>
+          <div class="content-grid"><div class="panel"><div class="panel-heading"><div><h3>Your next steps</h3><p>Start with what matters most.</p></div><span class="panel-dots">•••</span></div><button class="action-row" onclick="showDashboard('profile')"><span class="action-icon purple">◎</span><span><strong>Complete your profile</strong><small>Add the details you want to keep handy.</small></span><b>→</b></button><button class="action-row" onclick="openJee()"><span class="action-icon blue">▤</span><span><strong>Upload documents for your JEE form</strong><small>Aadhaar, Class 10 and Class 12 marksheets.</small></span><b>→</b></button><button class="action-row" onclick="showDashboard('applications')"><span class="action-icon peach">✓</span><span><strong>Create an application checklist</strong><small>Track the preparation process.</small></span><b>→</b></button></div><div class="panel side-panel"><div class="panel-heading"><div><h3>Keep in mind</h3><p>A helpful reminder</p></div><span class="round-icon">✦</span></div><div class="reminder-box"><strong>Review before you use.</strong><p>OCR can make mistakes. Confirm extracted information against your original documents before using it anywhere.</p></div><div class="reminder-box neutral"><strong>Official submission</strong><p>Use the official exam website for final submission and required verification steps.</p></div></div></div>
+        </section>
+        <section id="page-profile" class="dash-page hidden"><div class="panel form-panel"><div class="panel-heading"><div><h3>My profile</h3><p>Keep your details accurate and up to date.</p></div></div><form onsubmit="saveProfile(event)" class="form-grid"><label>Full name<input id="profile-name" disabled></label><label>Email address<input id="profile-email" disabled></label><label>Phone number<input id="profile-phone" type="tel" maxlength="30" placeholder="Optional"></label><label>City<input id="profile-city" maxlength="100" placeholder="Your city"></label><label>Date of birth<input id="profile-dob" type="date"></label><div class="form-actions"><button class="btn btn-primary" type="submit">Save profile</button></div></form><p class="muted tiny">Only provide information you need. Your name and email are tied to your account in this MVP.</p></div></section>
+        <section id="page-documents" class="dash-page hidden"><div class="panel"><div class="panel-heading"><div><h3>Document organiser</h3><p>Upload a supported image or PDF (maximum 8 MB per file).</p></div></div><form id="upload-form" onsubmit="uploadDocument(event)" class="upload-zone"><div class="upload-symbol">↑</div><label class="upload-label">Choose a file<input id="document-file" type="file" accept=".png,.jpg,.jpeg,.webp,.pdf" required></label><p>PNG, JPG, WEBP or PDF · Maximum 8 MB</p><button class="btn btn-primary" type="submit">Upload document</button><p id="upload-error" class="form-error"></p></form><div id="document-list" class="record-list"></div></div><div class="panel ocr-panel"><div class="panel-heading"><div><h3>OCR text review</h3><p>Text extracted from your latest image upload appears here if OCR is available.</p></div></div><textarea id="ocr-text" rows="5" placeholder="Upload a clear image to try OCR. You can review/copy the extracted text here."></textarea><div class="inline-actions"><button class="btn btn-outline" onclick="copyOcr()">Copy text</button><span class="muted tiny">Always verify against the original document.</span></div></div></section>
+        <section id="page-applications" class="dash-page hidden"><div class="panel"><div class="panel-heading"><div><h3>Application assistance</h3><p>Create a preparation record and track your progress.</p></div></div><form onsubmit="createApplication(event)" class="form-grid"><label>Exam name<input id="exam-name" required maxlength="100" placeholder="e.g. JEE Main"></label><label>Session / year<input id="exam-session" maxlength="100" placeholder="e.g. 2027 Session 1"></label><label class="full-width">Notes (optional)<textarea id="exam-notes" rows="3" maxlength="2000" placeholder="Add a checklist or reminder"></textarea></label><div class="form-actions"><button class="btn btn-primary" type="submit">Create record +</button></div></form></div><div class="panel"><div class="panel-heading"><div><h3>Your records</h3><p>Update your own preparation status.</p></div></div><div id="application-list" class="record-list"></div></div></section>
+        <section id="page-support" class="dash-page hidden"><div class="panel form-panel"><div class="panel-heading"><div><h3>Help & support</h3><p>Send a question to the Exam Buddy admin.</p></div></div><form onsubmit="submitSupport(event)" class="form-grid"><label class="full-width">Subject<input id="support-subject" required minlength="2" maxlength="150" placeholder="What do you need help with?"></label><label class="full-width">Message<textarea id="support-message" required minlength="5" maxlength="3000" rows="5" placeholder="Describe your question (do not include passwords or sensitive IDs)."></textarea></label><div class="form-actions"><button class="btn btn-primary" type="submit">Submit request</button></div></form></div><div class="panel"><div class="panel-heading"><div><h3>Your support requests</h3><p>Requests submitted from this account.</p></div></div><div id="support-list" class="record-list"></div></div></section>
+        <section id="page-details" class="dash-page hidden"><div class="panel"><div class="panel-heading"><div><h3 id="details-title">Documents &amp; details</h3><p>Upload your documents. We read them automatically; you check and correct.</p></div><button class="btn btn-outline btn-sm" onclick="showDashboard(currentUser.role==='admin'?'admin':'applications')">← Back</button></div><div id="details-body"></div></div></section>
+        <section id="page-admin" class="dash-page hidden"><div class="admin-metrics" id="admin-metrics"></div><div class="panel"><div class="panel-heading"><div><h3>Users</h3><p>Registered accounts. Handle all student information confidentially.</p></div><button class="btn btn-outline btn-sm" onclick="loadAdmin()">Refresh</button></div><div id="admin-users" class="table-wrap"></div></div><div class="panel"><div class="panel-heading"><div><h3>All application records</h3><p>Update statuses when the assistance workflow changes.</p></div></div><div id="admin-applications" class="record-list"></div></div><div class="panel"><div class="panel-heading"><div><h3>Support inbox</h3><p>Review and update support requests.</p></div></div><div id="admin-support" class="record-list"></div></div></section>
+        <footer class="dash-footer">Exam Buddy · Independent student assistance workspace · Not an official exam portal.</footer>
+      </section>
+    </main>
+    <footer id="site-footer" class="site-footer"><span>© 2026 Exam Buddy</span><span>Built to make preparation feel simpler.</span></footer>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
